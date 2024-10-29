@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NeoMind AI - 智能聊天机器人</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <link href="styles/main.css" rel="stylesheet">
+    <link href="styles/chat.css" rel="stylesheet">
+    <link href="styles/membership.css" rel="stylesheet">
+    <link href="styles/admin.css" rel="stylesheet">
+</head>
+<body>
+    <div class="container">
+        <div class="chat-header">
+            <h1>NeoMind AI</h1>
+            <div>
+                <button id="login-button" title="登录">登录</button>
+                <button id="logout-button" title="退出登录">退出</button>
+                <button id="admin-panel-button" title="管理面板" style="display: none;">管理面板</button>
+            </div>
+        </div>
+        <div id="chatbox"></div>
+        <div class="input-area">
+            <input type="text" id="user-input" placeholder="输入您的消息...">
+            <button id="send-button" title="发送消息"><i class="fas fa-paper-plane"></i></button>
+        </div>
+    </div>
+
+    <div id="login-modal" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <h2 id="modal-title">登录</h2>
+            <input type="text" id="username" placeholder="用户名">
+            <input type="password" id="password" placeholder="密码">
+            <button id="submit-btn">登录</button>
+            <div class="form-links">
+                <a href="#" id="switch-link">还没有账号？注册</a>
+                <a href="#" id="reset-password-link">忘记密码？</a>
+            </div>
+            <p class="error-message" id="error-message"></p>
+        </div>
+    </div>
+
+    <div id="admin-modal" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <h2>管理员面板</h2>
+            <!-- 管理员面板的内容将由 JavaScript 动态生成 -->
+        </div>
+    </div>
+
+    <script src="js/config.js"></script>
+    <script src="js/storage.js"></script>
+    <script src="js/ui.js"></script>
+    <script src="js/auth.js"></script>
+    <script src="js/chat.js"></script>
+    <script src="js/membership.js"></script>
+    <script src="js/admin.js"></script>
+    <script src="js/main.js"></script>
+</body>
+</html>

@@ -1,0 +1,168 @@
+:root {
+    --primary-color: #4a90e2;
+    --secondary-color: #84fab0;
+    --text-color: #ffffff;
+    --dark-bg: #1a1a2e;
+    --light-bg: #16213e;
+    --input-bg: rgba(255, 255, 255, 0.1);
+    --shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body, html {
+    font-family: 'Roboto', sans-serif;
+    color: var(--text-color);
+    height: 100%;
+    line-height: 1.6;
+    background: url('../images/Beijing.png') no-repeat center center fixed;
+    background-size: cover;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+.chat-header {
+    background: linear-gradient(135deg, rgba(74, 144, 226, 0.9), rgba(132, 250, 176, 0.9));
+    padding: 20px;
+    border-radius: 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: var(--shadow);
+}
+
+#login-button, #logout-button {
+    padding: 8px 16px;
+    border-radius: 20px;
+    border: none;
+    background: rgba(255, 255, 255, 0.2);
+    color: white;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0,0,0,0.4);
+    overflow-y: auto;
+}
+
+.modal-content {
+    background: linear-gradient(135deg, rgba(74, 144, 226, 0.95), rgba(132, 250, 176, 0.95));
+    margin: 5% auto;
+    padding: 30px;
+    border: none;
+    width: 350px;
+    border-radius: 15px;
+    box-shadow: 0 8px 32px rgba(31, 38, 135, 0.3);
+    backdrop-filter: blur(8px);
+    color: var(--dark-bg);
+    position: relative;
+}
+
+.modal-content h2 {
+    margin-bottom: 20px;
+    color: var(--dark-bg);
+    text-align: center;
+    font-size: 24px;
+}
+
+.modal-content input {
+    width: 100%;
+    padding: 12px 15px;
+    margin: 8px 0;
+    border: none;
+    border-radius: 25px;
+    background: rgba(255, 255, 255, 0.4);
+    color: var(--dark-bg);
+    font-size: 16px;
+    transition: all 0.3s ease;
+}
+
+.modal-content input:focus {
+    outline: none;
+    background: rgba(255, 255, 255, 0.6);
+    box-shadow: 0 0 8px rgba(0, 0, 0, 0.1);
+}
+
+.modal-content button {
+    width: 100%;
+    padding: 12px;
+    margin: 15px 0;
+    border: none;
+    border-radius: 25px;
+    background: var(--dark-bg);
+    color: white;
+    font-size: 16px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.modal-content button:hover {
+    background: rgba(26, 26, 46, 0.9);
+    transform: translateY(-2px);
+}
+
+#switch-form {
+    text-align: center;
+    margin-top: 15px;
+    color: var(--dark-bg);
+}
+
+#switch-form a {
+    color: var(--dark-bg);
+    text-decoration: underline;
+    font-weight: 500;
+}
+
+.error-message {
+    color: #ff3333;
+    text-align: center;
+    margin-top: 10px;
+    font-size: 14px;
+}
+
+.close {
+    color: var(--dark-bg);
+    opacity: 0.7;
+    transition: all 0.3s ease;
+}
+
+.close:hover {
+    opacity: 1;
+}
+
+/* 添加链接样式 */
+.form-links {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 15px;
+    padding: 0 10px;
+}
+
+.form-links a {
+    color: var(--dark-bg);
+    text-decoration: none;
+    font-size: 14px;
+}
+
+.form-links a:hover {
+    text-decoration: underline;
+}

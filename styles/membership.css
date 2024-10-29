@@ -1,0 +1,201 @@
+.membership-info {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 5px 12px;
+    background: rgba(255, 255, 255, 0.2);
+    border-radius: 15px;
+    backdrop-filter: blur(5px);
+    margin-right: 15px;
+}
+
+.member-level {
+    font-weight: 500;
+    padding: 2px 8px;
+    border-radius: 10px;
+}
+
+.member-level.normal { background: #808080; }
+.member-level.silver { background: linear-gradient(135deg, #C0C0C0, #E8E8E8); color: #333; }
+.member-level.gold { background: linear-gradient(135deg, #FFD700, #FFA500); color: #333; }
+.member-level.platinum { background: linear-gradient(135deg, #E5E4E2, #B9F2FF); color: #333; }
+.member-level.lifetime { background: linear-gradient(135deg, #FF1493, #FF69B4); color: #fff; }
+
+.usage-count {
+    font-size: 1em;
+    color: #ffffff;
+    padding: 5px 12px;
+    background: rgba(255, 255, 255, 0.2);
+    border-radius: 15px;
+    backdrop-filter: blur(5px);
+    display: inline-block;
+    font-weight: 500;
+}
+
+/* 会员升级模态框样式 */
+.membership-upgrade {
+    width: 90% !important;
+    max-width: 1200px !important;
+}
+
+.membership-options {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+    padding: 20px 0;
+}
+
+.membership-card {
+    background: rgba(255, 255, 255, 0.9);
+    padding: 20px;
+    border-radius: 15px;
+    text-align: center;
+    transition: transform 0.3s ease;
+}
+
+.membership-card:hover {
+    transform: translateY(-5px);
+}
+
+.membership-card h3 {
+    color: var(--dark-bg);
+    margin-bottom: 10px;
+    font-size: 20px;
+}
+
+.membership-card .price {
+    font-size: 24px;
+    font-weight: bold;
+    color: var(--primary-color);
+    margin-bottom: 15px;
+}
+
+.membership-card ul {
+    list-style: none;
+    margin-bottom: 20px;
+    text-align: left;
+    padding-left: 20px;
+}
+
+.membership-card ul li {
+    margin: 10px 0;
+    color: var(--dark-bg);
+    position: relative;
+}
+
+.membership-card ul li:before {
+    content: "✓";
+    color: #4CAF50;
+    position: absolute;
+    left: -20px;
+}
+
+.membership-card button {
+    width: 100%;
+    padding: 10px;
+    border: none;
+    border-radius: 25px;
+    background: var(--primary-color);
+    color: white;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.membership-card button:hover {
+    background: var(--dark-bg);
+    transform: translateY(-2px);
+}
+
+/* 会员卡片特殊样式 */
+.membership-card.silver { border: 2px solid #C0C0C0; }
+.membership-card.gold { border: 2px solid #FFD700; }
+.membership-card.platinum { border: 2px solid #E5E4E2; }
+.membership-card.lifetime { 
+    border: 2px solid #FF1493;
+    background: linear-gradient(135deg, rgba(255,20,147,0.1), rgba(255,105,180,0.1));
+}
+
+/* 在现有样式的基础上添加支付相关样式 */
+
+/* 支付模态框样式 */
+.payment-modal {
+    max-width: 400px !important;
+}
+
+.payment-info {
+    background: rgba(255, 255, 255, 0.2);
+    padding: 15px;
+    border-radius: 10px;
+    margin: 15px 0;
+}
+
+.payment-methods {
+    display: flex;
+    gap: 15px;
+    justify-content: center;
+    margin: 20px 0;
+}
+
+.payment-btn {
+    padding: 12px 24px;
+    border: none;
+    border-radius: 25px;
+    cursor: pointer;
+    font-size: 16px;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    transition: all 0.3s ease;
+}
+
+.payment-btn i {
+    font-size: 20px;
+}
+
+.payment-btn.wechat {
+    background: #07C160;
+    color: white;
+}
+
+.payment-btn.alipay {
+    background: #1677FF;
+    color: white;
+}
+
+.payment-btn:hover {
+    transform: translateY(-2px);
+    opacity: 0.9;
+}
+
+#qrcode-container {
+    text-align: center;
+    margin-top: 20px;
+}
+
+#payment-qrcode {
+    max-width: 200px;
+    margin: 0 auto;
+    display: block;
+    border-radius: 10px;
+}
+
+.payment-tips {
+    margin: 15px 0;
+    color: var(--dark-bg);
+    font-size: 14px;
+}
+
+.confirm-payment {
+    background: var(--primary-color);
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 20px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.confirm-payment:hover {
+    background: var(--dark-bg);
+    transform: translateY(-2px);
+}
